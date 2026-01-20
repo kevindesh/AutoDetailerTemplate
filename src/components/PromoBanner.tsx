@@ -3,11 +3,31 @@ import { Timer } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function PromoBanner() {
-  const [timeLeft, setTimeLeft] = useState(4 * 60 * 60); // 4 hours in seconds
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const savedTime = localStorage.getItem("promoTimer");
+    const now = Date.now();
+
+    if (savedTime) {
+      const target = parseInt(savedTime, 10);
+      if (target > now) {
+        return Math.floor((target - now) / 1000);
+      }
+    }
+
+    const newTarget = now + 4 * 60 * 60 * 1000;
+    localStorage.setItem("promoTimer", newTarget.toString());
+    return 4 * 60 * 60;
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      const savedTime = localStorage.getItem("promoTimer");
+      if (savedTime) {
+        const target = parseInt(savedTime, 10);
+        const now = Date.now();
+        const diff = Math.floor((target - now) / 1000);
+        setTimeLeft(diff > 0 ? diff : 0);
+      }
     }, 1000);
 
     return () => clearInterval(timer);
