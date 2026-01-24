@@ -43,7 +43,7 @@ export function PromoBanner() {
   return (
     <Link to="/contact" className="block bg-[#2ea1bd] px-4 py-3 text-white transition-colors hover:brightness-95">
       <div className="container flex items-center justify-center gap-2 text-center text-sm font-medium">
-        <Timer className="h-4 w-4" />
+        <Timer className="hidden md:block h-4 w-4" />
         <p>
           Special Offer: Get <span className="font-bold">10% OFF</span> when you book in the next <span className="font-mono font-bold">{formatTime(timeLeft)}</span>!
         </p>

@@ -46,22 +46,21 @@ function HeroSection() {
 const trustPoints = [
   { icon: Sparkles, text: "Professional results" },
   { icon: ThumbsUp, text: "Honest pricing" },
-  { icon: Clock, text: "Fast turnaround" },
-  { icon: Shield, text: "High-quality products" },
-  { icon: Droplets, text: "Mobile-friendly booking" },
+  { icon: Shield, text: "High-Quality Service", className: "hidden md:flex" },
+  { icon: Droplets, text: "Mobile-friendly booking", className: "col-span-2 md:w-auto" },
 ];
 
 function TrustSection() {
   return (
     <section className="section-padding bg-background">
       <div className="section-container">
-        <div className="flex flex-wrap justify-center gap-8 lg:gap-16">
+        <div className="grid grid-cols-2 gap-8 md:flex md:flex-wrap md:justify-center md:gap-8 lg:gap-16">
           {trustPoints.map((point, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 text-muted-foreground"
+              className={`flex flex-col items-center text-center md:flex-row md:text-left gap-3 text-muted-foreground ${point.className || ""}`}
             >
-              <point.icon className="w-5 h-5 text-accent" />
+              <point.icon className="w-6 h-6 md:w-5 md:h-5 text-accent" />
               <span className="font-medium">{point.text}</span>
             </div>
           ))}
