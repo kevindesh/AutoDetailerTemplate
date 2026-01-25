@@ -41,7 +41,7 @@ export default function About() {
               Car Care Without the Confusion
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We started GrowthPilot Auto Detailing because we believe getting your car cleaned shouldn't be complicated, expensive, or stressful.
+              We started King Judah Auto Detailing because we believe getting your car cleaned shouldn't be complicated, expensive, or stressful.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function About() {
                   We wanted something simple: honest pricing, quality work, and friendly service. When we couldn't find it, we decided to build it ourselves.
                 </p>
                 <p>
-                  Today, GrowthPilot Auto Detailing serves drivers across the Greater Toronto Area who want their cars to look great without the hassle. We're not the cheapest option, but we're the one you can trust.
+                  Today, King Judah Auto Detailing serves drivers in our community who want their cars to look great without the hassle. We're not the cheapest option, but we're the one you can trust.
                 </p>
               </div>
             </div>

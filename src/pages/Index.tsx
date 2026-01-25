@@ -12,11 +12,11 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Professional Auto Detailing That Brings Your Car{" "}
+              Professional Auto Detailing & Steaming That Brings Your Car{" "}
               <span className="text-accent">Back to Life</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              We provide reliable, high-quality car detailing that leaves your vehicle clean, protected, and refreshed. No gimmicks, no upsells—just professional results.
+              We provide reliable, high-quality car detailing and steam cleaning that leaves your vehicle clean, protected, and refreshed. No gimmicks, no upsells—just professional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" asChild>
@@ -87,6 +87,10 @@ const services = [
   {
     title: "Maintenance Washes",
     description: "Regular care to keep your car looking its best.",
+  },
+  {
+    title: "Interior Steaming",
+    description: "Deep steam cleaning to sanitize and remove stubborn stains.",
   },
   {
     title: "Paint Protection",

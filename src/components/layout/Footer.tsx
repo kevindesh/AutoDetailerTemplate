@@ -23,18 +23,18 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">GP</span>
+                <span className="text-accent-foreground font-bold text-sm">KJ</span>
               </div>
-              <span className="font-semibold text-lg">GrowthPilot</span>
+              <span className="font-semibold text-lg">King Judah</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-sm text-sm leading-relaxed">
-              Professional auto detailing that brings your car back to life. 
+              Professional auto detailing and steaming service that brings your car back to life. 
               Reliable service, honest pricing, real results.
             </p>
             <div className="mt-6 space-y-1 text-sm text-primary-foreground/70">
-              <p>📍 Serving the Greater Toronto Area</p>
-              <p>📞 (416) 555-0123</p>
-              <p>✉️ hello@growthpilot.ca</p>
+              <p>📍 Serving our community</p>
+              <p>📞 (555) 123-4567</p>
+              <p>✉️ info@kingjudahdetailing.com</p>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <p className="text-sm text-primary-foreground/50 text-center">
-            © {new Date().getFullYear()} GrowthPilot Auto Detailing. All rights reserved.
+            © {new Date().getFullYear()} King Judah Auto Detailing. All rights reserved.
           </p>
         </div>
       </div>

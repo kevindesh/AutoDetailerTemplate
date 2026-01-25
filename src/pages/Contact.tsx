@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(416) 555-0123",
-    href: "tel:+14165550123",
+    value: "(555) 123-4567",
+    href: "tel:+15551234567",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "hello@growthpilot.ca",
-    href: "mailto:hello@growthpilot.ca",
+    value: "info@kingjudahdetailing.com",
+    href: "mailto:info@kingjudahdetailing.com",
   },
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Greater Toronto Area",
+    value: "Serving our community",
   },
   {
     icon: Clock,

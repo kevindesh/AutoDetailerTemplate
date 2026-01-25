@@ -80,6 +80,24 @@ const services = [
     time: "45 minutes",
   },
   {
+    id: "steaming",
+    icon: Droplets,
+    title: "Eco Steam Cleaning",
+    tagline: "Deep sanitize with the power of steam",
+    description:
+      "Our chemical-free steam cleaning penetrates pores in upholstery and hard surfaces, killing bacteria and removing stubborn stains without harsh chemicals.",
+    includes: [
+      "Steam cleaning of seats and carpets",
+      "Sterilization of vents and cup holders",
+      "Stain removal",
+      "Odor elimination",
+      "Chemical-free cleaning",
+    ],
+    result: "A sanitized, fresh environment safe for kids and pets.",
+    price: "From $129",
+    time: "2-3 hours",
+  },
+  {
     id: "protection",
     icon: Shield,
     title: "Paint Protection & Wax",

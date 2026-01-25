@@ -41,7 +41,8 @@ const packages = [
     time: "~4-5 hours",
     features: [
       "Everything in Standard",
-      "Deep interior shampooing",
+      "Deep interior steam cleaning",
+      "Interior shampooing",
       "Paint correction (minor)",
       "Clay bar treatment",
       "Premium sealant protection",
@@ -54,6 +55,7 @@ const packages = [
 ];
 
 const addOns = [
+  { name: "Interior Steam Cleaning", price: "+$59" },
   { name: "Engine Bay Cleaning", price: "+$49" },
   { name: "Headlight Restoration", price: "+$69" },
   { name: "Pet Hair Removal", price: "+$39" },
@@ -183,7 +185,7 @@ export default function Pricing() {
         <div className="section-container text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-            Book your detail today and experience the GrowthPilot difference.
+            Book your detail today and experience the King Judah difference.
           </p>
           <Button variant="accent" size="xl" asChild>
             <Link to="/contact">Book Now</Link>
