@@ -73,28 +73,28 @@ function TrustSection() {
 // Services Overview
 const services = [
   {
-    title: "Interior Detailing",
-    description: "Deep clean your cabin for a fresh, comfortable ride.",
+    title: "Silver Package",
+    description: "A complete refresh inside and out. Includes interior vacuuming, surface cleaning, and a thorough exterior wash.",
   },
   {
-    title: "Exterior Detailing",
-    description: "Restore your paint's shine and protect it from the elements.",
+    title: "Gold Package",
+    description: "Take your detail to the next level with shampooing, leather dressing, and an exterior hand polish for extra shine.",
   },
   {
-    title: "Full Detail Packages",
-    description: "Complete inside and out refresh for maximum impact.",
+    title: "Diamond Package",
+    description: "Our most comprehensive package. Includes paint correction steps, ceramic wax, and intense interior revitalization.",
   },
   {
-    title: "Maintenance Washes",
-    description: "Regular care to keep your car looking its best.",
+    title: "Paint Correction",
+    description: "Multi-stage correction to remove swirls, scratches, and defects from your vehicle's paint.",
   },
   {
-    title: "Interior Steaming",
-    description: "Deep steam cleaning to sanitize and remove stubborn stains.",
+    title: "Engine Bay Cleaning",
+    description: "Thoroughly shampoo and dress your engine bay to make it look brand new.",
   },
   {
-    title: "Paint Protection",
-    description: "Long-lasting protection against scratches and UV damage.",
+    title: "Headlamp Restoration",
+    description: "Restore cloudy, yellowed headlights to clear, improving nighttime visibility and appearance.",
   },
 ];
 
@@ -175,20 +175,20 @@ function HowItWorksSection() {
 // Pricing Preview
 const packages = [
   {
-    name: "Starter Detail",
-    price: "$79",
-    features: ["Exterior wash", "Interior vacuum", "Quick wipe-down"],
+    name: "Silver Package",
+    price: "$100",
+    features: ["Interior vacuum", "Exterior wash & dry", "Clean door panels & console"],
   },
   {
-    name: "Standard Detail",
-    price: "$149",
+    name: "Gold Package",
+    price: "$150",
     popular: true,
-    features: ["Full interior clean", "Exterior wash & wax", "Tire & wheel cleaning"],
+    features: ["Everything in Silver", "Shampoo carpets & seats", "Exterior hand polish"],
   },
   {
-    name: "Premium Detail",
-    price: "$249",
-    features: ["Deep interior detailing", "Paint protection", "Full inside & out refresh"],
+    name: "Diamond Package",
+    price: "$250",
+    features: ["Everything in Gold", "Ceramic wax application", "High-speed buff/polish"],
   },
 ];
 
