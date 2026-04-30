@@ -32,9 +32,9 @@ export function Footer() {
               Reliable service, honest pricing, real results.
             </p>
             <div className="mt-6 space-y-1 text-sm text-primary-foreground/70">
-              <p>📍 Serving our community</p>
-              <p>📞 (555) 123-4567</p>
-              <p>✉️ info@kingjudahdetailing.com</p>
+              <p>📍 Scarborough and London</p>
+              <p>📞 (647) 562-8211</p>
+              <p>✉️ onesydee@gmail.com</p>
             </div>
           </div>
 

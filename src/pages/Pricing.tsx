@@ -5,63 +5,59 @@ import { Check } from "lucide-react";
 
 const packages = [
   {
-    name: "Starter Detail",
-    description: "Quick refresh for busy schedules",
-    price: "$79",
-    time: "~1 hour",
+    name: "Silver Package",
+    description: "Essential care for your vehicle's interior and exterior",
+    price: "$100",
+    prices: { sedan: "$100", suv: "$120", truck: "$140" },
     features: [
-      "Exterior hand wash",
-      "Interior vacuum",
-      "Dashboard wipe-down",
-      "Window cleaning",
-      "Tire dressing",
+      "Complete interior vacuum",
+      "Clean door panels, console, cup holders, dashboard, vents",
+      "Door jambs & interior windows",
+      "Exterior hand wash & dry",
+      "Rim & wheel well cleaning",
+      "Tire dressing/shine",
     ],
-    cta: "Book Starter",
+    cta: "Book Silver",
   },
   {
-    name: "Standard Detail",
-    description: "Our most popular choice",
-    price: "$149",
-    time: "~2.5 hours",
+    name: "Gold Package",
+    description: "Enhanced cleaning with polish and shampoo",
+    price: "$150",
+    prices: { sedan: "$150", suv: "$170", truck: "$190" },
+    features: [
+      "Everything in Silver",
+      "Leather/vinyl dressing",
+      "Shampoo carpets, mats & seats",
+      "Headliner cleaning",
+      "Exterior hand polish",
+    ],
+    cta: "Book Gold",
+  },
+  {
+    name: "Diamond Package",
+    description: "The ultimate premium detailing experience",
+    price: "$250",
+    prices: { sedan: "$250", suv: "$300", truck: "$350" },
     popular: true,
     features: [
-      "Full interior deep clean",
-      "Exterior wash & hand wax",
-      "Tire & wheel detailing",
-      "Door jamb cleaning",
-      "Air freshener included",
-      "Dashboard & console treatment",
+      "Everything in Gold",
+      "Interior deodorizing/steaming",
+      "Exterior claybar treatment",
+      "High-speed buff/polish",
+      "Ceramic wax application",
+      "Engine bay shampoo/dressing",
     ],
-    cta: "Book Standard",
-  },
-  {
-    name: "Premium Detail",
-    description: "The ultimate car care experience",
-    price: "$249",
-    time: "~4-5 hours",
-    features: [
-      "Everything in Standard",
-      "Deep interior steam cleaning",
-      "Interior shampooing",
-      "Paint correction (minor)",
-      "Clay bar treatment",
-      "Premium sealant protection",
-      "Engine bay cleaning",
-      "Leather conditioning",
-      "Odor elimination",
-    ],
-    cta: "Book Premium",
+    cta: "Book Diamond",
   },
 ];
 
 const addOns = [
-  { name: "Interior Steam Cleaning", price: "+$59" },
-  { name: "Engine Bay Cleaning", price: "+$49" },
-  { name: "Headlight Restoration", price: "+$69" },
-  { name: "Pet Hair Removal", price: "+$39" },
-  { name: "Ceramic Coating", price: "+$299" },
-  { name: "Odor Elimination", price: "+$49" },
-  { name: "Leather Conditioning", price: "+$39" },
+  { name: "Paint Correction (Full Multi-Stage)", price: "$350" },
+  { name: "Complete Interior Only", price: "$100" },
+  { name: "Exterior Hand Wash & Windows", price: "$80" },
+  { name: "Engine Bay Shampoo & Dressing", price: "$60" },
+  { name: "Dog Hair Removal", price: "$60" },
+  { name: "Headlamp Restoration", price: "$50" },
 ];
 
 export default function Pricing() {
@@ -90,7 +86,7 @@ export default function Pricing() {
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-sm font-semibold px-4 py-1.5 rounded-full">
-                    Most Popular
+                    Premium Option
                   </div>
                 )}
 
@@ -99,12 +95,26 @@ export default function Pricing() {
                   <p className="text-sm text-muted-foreground">{pkg.description}</p>
                 </div>
 
-                <div className="mb-6">
-                  <div className="text-4xl font-bold">
+                <div className="mb-6 border-b pb-4">
+                  <div className="text-sm text-muted-foreground mb-2">Starting at</div>
+                  <div className="text-4xl font-bold mb-4">
                     {pkg.price}
                     <span className="text-lg font-normal text-muted-foreground">+</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{pkg.time}</p>
+                  <div className="space-y-1.5 flex flex-col pt-2 border-t">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Sedan:</span>
+                      <span className="font-medium text-foreground">{pkg.prices.sedan}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">SUV:</span>
+                      <span className="font-medium text-foreground">{pkg.prices.suv}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Van/Truck:</span>
+                      <span className="font-medium text-foreground">{pkg.prices.truck}</span>
+                    </div>
+                  </div>
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
@@ -134,9 +144,9 @@ export default function Pricing() {
       <section className="section-padding bg-secondary">
         <div className="section-container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Add-On Services</h2>
+            <h2 className="text-3xl font-bold mb-4">Individual & Standalone Services</h2>
             <p className="text-muted-foreground">
-              Enhance any package with these optional extras.
+              Book these specialized services on their own or combine them for a customized detail.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">

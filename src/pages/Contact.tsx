@@ -11,24 +11,24 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(555) 123-4567",
-    href: "tel:+15551234567",
+    value: "(647) 562-8211",
+    href: "tel:+16475628211",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@kingjudahdetailing.com",
-    href: "mailto:info@kingjudahdetailing.com",
+    value: "onesydee@gmail.com",
+    href: "mailto:onesydee@gmail.com",
   },
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Serving our community",
+    value: "Scarborough and London",
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon-Sat: 8am-6pm",
+    value: "Mon-Fri: 10am-8pm, Sat-Sun: 9am-5pm",
   },
 ];
 
@@ -40,33 +40,58 @@ export default function Contact() {
     email: "",
     phone: "",
     vehicle: "",
+    carType: "",
+    package: "",
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Replace this with your actual Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZIB2FIyZICcDll6KxcNuCS1lTmKo3wLvkSHaGuAp-pU4dmYG8xhqtyLE8Wq_EM_en/exec";
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxZIB2FIyZICcDll6KxcNuCS1lTmKo3wLvkSHaGuAp-pU4dmYG8xhqtyLE8Wq_EM_en/exec";
+    
+    try {
+      // Send the data as a stringified JSON object to match your Apps Script
+      await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      vehicle: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        vehicle: "",
+        carType: "",
+        package: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Error submitting form",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -108,14 +133,15 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
+                      <Label htmlFor="phone">Phone *</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="(416) 555-0123"
+                        required
+                        placeholder="(647) 562-8211"
                       />
                     </div>
                   </div>
@@ -142,6 +168,40 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="e.g. 2022 Honda Civic"
                     />
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="carType">Vehicle Type</Label>
+                      <select
+                        id="carType"
+                        name="carType"
+                        value={formData.carType}
+                        onChange={handleChange}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">Select vehicle type...</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Van/Truck">Van/Truck</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="package">Package / Service</Label>
+                      <select
+                        id="package"
+                        name="package"
+                        value={formData.package}
+                        onChange={handleChange}
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">Select a package...</option>
+                        <option value="Silver Package">Silver Package</option>
+                        <option value="Gold Package">Gold Package</option>
+                        <option value="Diamond Package">Diamond Package</option>
+                        <option value="Standalone Service">Other / Standalone Service</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div className="space-y-2">
@@ -215,11 +275,11 @@ export default function Contact() {
                   Give us a ring and we'll help you book the right service for your vehicle.
                 </p>
                 <a
-                  href="tel:+14165550123"
+                  href="tel:+16475628211"
                   className="inline-flex items-center gap-2 text-accent font-medium hover:underline"
                 >
                   <Phone className="w-4 h-4" />
-                  (416) 555-0123
+                  (647) 562-8211
                 </a>
               </div>
             </div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Auto Detailing</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 2rem; }
+        .pricing-section { max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; color: #222; }
+        .cards { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 4rem; }
+        .card { background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 2rem; flex: 1; min-width: 300px; max-width: 350px; display: flex; flex-direction: column; }
+        .card.premium { border: 2px solid #d4af37; transform: scale(1.05); box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2); position: relative; }
+        .premium-badge { position: absolute; top: 0; right: 0; background: #d4af37; color: #fff; padding: 0.5rem 1rem; border-bottom-left-radius: 8px; border-top-right-radius: 6px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .tier-name { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center; }
+        .price-list { list-style: none; padding: 0; margin-bottom: 1.5rem; text-align: center; color: #666; font-weight: bold; }
+        .features { list-style: none; padding: 0; flex-grow: 1; }
+        .features li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; font-size: 0.95rem; line-height: 1.4; color: #555; }
+        .features li::before { content: "✓"; position: absolute; left: 0; color: #4CAF50; font-weight: bold; }
+        
+        .addons-table { width: 100%; max-width: 800px; margin: 0 auto; border-collapse: collapse; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .addons-table th, .addons-table td { padding: 1rem; border-bottom: 1px solid #eee; text-align: left; }
+        .addons-table th { background: #f8f9fa; font-weight: bold; }
+        .addons-table tr:last-child td { border-bottom: none; }
+        .service-desc { font-size: 0.85rem; color: #777; display: block; margin-top: 0.3rem; }
+    </style>
+</head>
+<body>
+
+<section class="pricing-section">
+    <h2 class="section-title">Detailing Packages</h2>
+    
+    <div class="cards">
+        <!-- Silver -->
+        <div class="card">
+            <div class="tier-name">Silver Package</div>
+            <ul class="price-list">
+                <li>Sedan: $100</li>
+                <li>SUV: $120</li>
+                <li>Van/Truck: $140</li>
+            </ul>
+            <ul class="features">
+                <li>Complete interior vacuum</li>
+                <li>Cleaning of door panels, center console, cup holders, compartments, dashboard, and air vents</li>
+                <li>Door jambs & interior windows</li>
+                <li>Exterior hand wash & dry</li>
+                <li>Rim & wheel well cleaning</li>
+                <li>Tire dressing/shine</li>
+            </ul>
+        </div>
+
+        <!-- Diamond (Highlighted) -->
+        <div class="card premium">
+            <div class="premium-badge">Most Popular</div>
+            <div class="tier-name">Diamond Package</div>
+            <ul class="price-list">
+                <li>Sedan: $250</li>
+                <li>SUV: $300</li>
+                <li>Van/Truck: $350</li>
+            </ul>
+            <ul class="features">
+                <li><strong>Everything in Gold, PLUS:</strong></li>
+                <li>Interior deodorizing/steaming</li>
+                <li>Exterior claybar treatment</li>
+                <li>High-speed buff/polish</li>
+                <li>Ceramic wax application</li>
+                <li>Engine bay shampoo/dressing</li>
+            </ul>
+        </div>
+
+        <!-- Gold -->
+        <div class="card">
+            <div class="tier-name">Gold Package</div>
+            <ul class="price-list">
+                <li>Sedan: $150</li>
+                <li>SUV: $170</li>
+                <li>Van/Truck: $190</li>
+            </ul>
+            <ul class="features">
+                <li><strong>Everything in Silver, PLUS:</strong></li>
+                <li>Leather/vinyl dressing</li>
+                <li>Shampooing of carpets, mats & seats</li>
+                <li>Headliner cleaning</li>
+                <li>Exterior hand polish</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Standalone Services -->
+    <h2 class="section-title">Individual & Standalone Services</h2>
+    <table class="addons-table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paint Correction
+                    <span class="service-desc">Full multi-stage process including claybar, wet sanding, high-speed buff, orbital polish, and ceramic wax application.</span>
+                </td>
+                <td>$350</td>
+            </tr>
+            <tr>
+                <td>Complete Interior Only</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Exterior Hand Wash & Windows</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td>Engine Bay Shampoo & Dressing</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>Dog Hair Removal</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>Headlamp Restoration</td>
+                <td>$50</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

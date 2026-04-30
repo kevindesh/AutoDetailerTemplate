@@ -5,117 +5,70 @@ import { Car, Sparkles, Shield, Droplets, Brush } from "lucide-react";
 
 const services = [
   {
-    id: "interior",
-    icon: Sparkles,
-    title: "Interior Detailing",
-    tagline: "A fresh, clean cabin you'll love",
+    id: "silver",
+    icon: Car,
+    title: "Silver Package",
+    tagline: "Essential care for your vehicle",
     description:
-      "Perfect for daily drivers who want a fresh, clean interior. We deep clean every surface so your car feels comfortable and inviting again.",
+      "A complete refresh inside and out. Includes interior vacuuming, surface cleaning, and a thorough exterior wash.",
     includes: [
-      "Complete vacuuming of seats, carpets, and mats",
-      "Dashboard, console, and door panel wipe-down",
-      "Window and mirror cleaning",
-      "Air vent dusting",
-      "Door jamb cleaning",
-      "Light stain removal",
+      "Complete interior vacuum",
+      "Clean door panels, console, cup holders, dashboard, vents",
+      "Door jambs & interior windows",
+      "Exterior hand wash & dry",
+      "Rim & wheel well cleaning",
+      "Tire dressing/shine",
     ],
-    result: "Step into a cabin that looks and smells like new.",
-    price: "From $89",
+    result: "A clean and refreshed vehicle ready for the road.",
+    price: "From $100",
     time: "1-2 hours",
   },
   {
-    id: "exterior",
-    icon: Droplets,
-    title: "Exterior Detailing",
-    tagline: "Restore your car's showroom shine",
+    id: "gold",
+    icon: Sparkles,
+    title: "Gold Package",
+    tagline: "Enhanced cleaning and protection",
     description:
-      "Bring back that deep, glossy finish. We carefully wash, clay, and protect your paint so it looks stunning and stays protected.",
+      "Take your detail to the next level with shampooing, leather dressing, and an exterior hand polish for extra shine.",
     includes: [
-      "Hand wash with premium soap",
-      "Clay bar treatment",
-      "Paint polish and wax",
-      "Tire and wheel cleaning",
-      "Trim restoration",
-      "Window cleaning",
+      "Everything in Silver Package",
+      "Leather/vinyl dressing",
+      "Shampoo carpets, mats & seats",
+      "Headliner cleaning",
+      "Exterior hand polish",
     ],
-    result: "A head-turning shine that lasts for weeks.",
-    price: "From $99",
-    time: "2-3 hours",
+    result: "A deeply cleaned interior and a glowing exterior.",
+    price: "From $150",
+    time: "2-4 hours",
   },
   {
-    id: "full",
-    icon: Car,
-    title: "Full Detail Package",
-    tagline: "The complete transformation",
-    description:
-      "Our most popular service. Get the best of both worlds with a comprehensive interior and exterior detail that refreshes your entire vehicle.",
-    includes: [
-      "Everything in Interior Detailing",
-      "Everything in Exterior Detailing",
-      "Engine bay cleaning",
-      "Leather conditioning (if applicable)",
-      "Odor elimination",
-      "Final inspection and touch-ups",
-    ],
-    result: "Your car, completely refreshed inside and out.",
-    price: "From $199",
-    time: "4-5 hours",
-  },
-  {
-    id: "maintenance",
-    icon: Brush,
-    title: "Maintenance Wash",
-    tagline: "Keep your car looking great between details",
-    description:
-      "Quick and affordable regular care to maintain your vehicle's appearance. Perfect for busy people who want consistent cleanliness.",
-    includes: [
-      "Exterior hand wash",
-      "Interior quick vacuum",
-      "Dashboard wipe-down",
-      "Window cleaning",
-      "Tire dressing",
-    ],
-    result: "A consistently clean car without the full detail price.",
-    price: "From $49",
-    time: "45 minutes",
-  },
-  {
-    id: "steaming",
-    icon: Droplets,
-    title: "Eco Steam Cleaning",
-    tagline: "Deep sanitize with the power of steam",
-    description:
-      "Our chemical-free steam cleaning penetrates pores in upholstery and hard surfaces, killing bacteria and removing stubborn stains without harsh chemicals.",
-    includes: [
-      "Steam cleaning of seats and carpets",
-      "Sterilization of vents and cup holders",
-      "Stain removal",
-      "Odor elimination",
-      "Chemical-free cleaning",
-    ],
-    result: "A sanitized, fresh environment safe for kids and pets.",
-    price: "From $129",
-    time: "2-3 hours",
-  },
-  {
-    id: "protection",
+    id: "diamond",
     icon: Shield,
-    title: "Paint Protection & Wax",
-    tagline: "Long-lasting defense for your paint",
+    title: "Diamond Package",
+    tagline: "The ultimate premium experience",
     description:
-      "Protect your investment with premium sealants and waxes that guard against UV rays, road grime, and minor scratches.",
+      "Our most comprehensive package. Includes paint correction steps, ceramic wax, and intense interior revitalization.",
     includes: [
-      "Paint decontamination",
-      "Clay bar treatment",
-      "Paint correction (minor)",
-      "Premium sealant application",
-      "Carnauba wax finish",
-      "6-month protection guarantee",
+      "Everything in Gold Package",
+      "Interior deodorizing/steaming",
+      "Exterior claybar treatment",
+      "High-speed buff/polish",
+      "Ceramic wax application",
+      "Engine bay shampoo/dressing",
     ],
-    result: "Peace of mind knowing your paint is protected.",
-    price: "From $149",
-    time: "3-4 hours",
+    result: "Showroom-quality finish and long-lasting protection.",
+    price: "From $250",
+    time: "4-6 hours",
   },
+];
+
+const standaloneServices = [
+  "Paint Correction (Full Multi-Stage)",
+  "Complete Interior Only",
+  "Exterior Hand Wash & Windows",
+  "Engine Bay Shampoo & Dressing",
+  "Dog Hair Removal",
+  "Headlamp Restoration",
 ];
 
 function ServiceCard({
@@ -185,7 +138,7 @@ export default function Services() {
         <div className="section-container text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            From quick maintenance washes to complete transformations, we have the right service for your car and your budget.
+            From comprehensive detailing packages to specific individual services, we have the right option for your car and your budget.
           </p>
         </div>
       </section>
@@ -198,6 +151,26 @@ export default function Services() {
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Standalone Services Section */}
+      <section className="section-padding bg-secondary">
+        <div className="section-container text-center">
+          <h2 className="text-3xl font-bold mb-6">Individual & Standalone Services</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+            Need something specific? We offer specialized individual services that can be booked on their own or combined for a customized detail.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+            {standaloneServices.map((service, index) => (
+              <div key={index} className="bg-card rounded-xl p-6 shadow-soft font-semibold text-foreground border border-border/50">
+                {service}
+              </div>
+            ))}
+          </div>
+          <Button variant="accent" size="lg" asChild>
+            <Link to="/pricing">View Pricing Options</Link>
+          </Button>
         </div>
       </section>
 
