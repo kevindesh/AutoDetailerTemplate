@@ -34,7 +34,8 @@ export function Footer() {
             <div className="mt-6 space-y-1 text-sm text-primary-foreground/70">
               <p>📍 Scarborough and London</p>
               <p>📞 (647) 562-8211</p>
-              <p>✉️ onesydee@gmail.com</p>
+              <p>✉️ <a href="mailto:onesydee@gmail.com" className="hover:text-accent transition-colors">onesydee@gmail.com</a></p>
+              <p>📷 <a href="https://www.instagram.com/k.the.detailer/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">@k.the.detailer</a></p>
             </div>
           </div>
 

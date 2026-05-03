@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
@@ -19,6 +19,12 @@ const contactInfo = [
     label: "Email",
     value: "onesydee@gmail.com",
     href: "mailto:onesydee@gmail.com",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@k.the.detailer",
+    href: "https://www.instagram.com/k.the.detailer/",
   },
   {
     icon: MapPin,
