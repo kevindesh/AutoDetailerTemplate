@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Scarborough and London",
+    value: "Mobile service in Scarborough and London",
   },
   {
     icon: Clock,
@@ -40,6 +40,7 @@ const contactInfo = [
 
 export default function Contact() {
   const { toast } = useToast();
+  const notificationEmail = "onesydee@gmail.com";
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -57,14 +58,24 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxZIB2FIyZICcDll6KxcNuCS1lTmKo3wLvkSHaGuAp-pU4dmYG8xhqtyLE8Wq_EM_en/exec";
+    const payload = {
+      ...formData,
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim(),
+      vehicle: formData.vehicle.trim(),
+      carType: formData.carType.trim(),
+      package: formData.package.trim(),
+      message: formData.message.trim(),
+      notificationEmail,
+      formType: "contact",
+      submittedAt: new Date().toISOString(),
+    };
     
     try {
-      // Send the data as a stringified JSON object to match your Apps Script
-      await fetch(scriptURL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
         mode: "no-cors",
         headers: {
           "Content-Type": "text/plain;charset=utf-8",
@@ -112,7 +123,7 @@ export default function Contact() {
         <div className="section-container text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Ready to book a detail or have questions? Send us a message and we'll get back to you quickly.
+            Ready to book mobile detailing at your location or have questions? Send us a message and we'll get back to you quickly.
           </p>
         </div>
       </section>
@@ -271,7 +282,7 @@ export default function Contact() {
               <div className="bg-secondary rounded-xl p-6">
                 <h3 className="font-semibold mb-3">Quick Response Guarantee</h3>
                 <p className="text-sm text-muted-foreground">
-                  We know your time is valuable. When you reach out, expect a friendly response within 24 hours—usually much sooner.
+                  We know your time is valuable. When you reach out, expect a friendly response within 24 hours—usually much sooner—to confirm your mobile appointment.
                 </p>
               </div>
 

@@ -71,3 +71,17 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Contact form email notifications
+
+When the contact form is submitted, this project posts to a Google Apps Script Web App URL. To send an email notification to `onesydee@gmail.com`:
+
+1. Open Google Apps Script and create a new project.
+2. Paste in the script from [scripts/contact-form-email-notifier.gs](scripts/contact-form-email-notifier.gs).
+3. Deploy as **Web app**:
+	- Execute as: **Me**
+	- Who has access: **Anyone**
+4. Copy the deployed Web App URL.
+5. In [src/pages/Contact.tsx](src/pages/Contact.tsx), set `GOOGLE_SCRIPT_URL` to that URL.
+
+After deployment, each contact form submission sends a notification email to `onesydee@gmail.com` with all submitted fields.

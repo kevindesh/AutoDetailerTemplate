@@ -68,7 +68,7 @@ export default function Pricing() {
         <div className="section-container text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            No hidden fees. No surprises. Choose the package that fits your needs and budget.
+            No hidden fees. No surprises. Every package is delivered by our fully mobile team at your location.
           </p>
         </div>
       </section>
@@ -185,6 +185,10 @@ export default function Pricing() {
                 <span className="text-accent">•</span>
                 Fleet and recurring service discounts available.
               </li>
+              <li className="flex gap-3">
+                <span className="text-accent">•</span>
+                We are fully mobile and come to your home, condo, or workplace.
+              </li>
             </ul>
           </div>
         </div>
@@ -195,7 +199,7 @@ export default function Pricing() {
         <div className="section-container text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-            Book your detail today and experience the King Judah difference.
+            Book your mobile detail today and experience the King Judah difference.
           </p>
           <Button variant="accent" size="xl" asChild>
             <Link to="/contact">Book Now</Link>

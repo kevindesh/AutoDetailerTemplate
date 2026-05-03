@@ -28,7 +28,7 @@ export function Footer() {
               <span className="font-semibold text-lg">King Judah</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-sm text-sm leading-relaxed">
-              Professional auto detailing and steaming service that brings your car back to life. 
+              Fully mobile auto detailing and steaming service that comes to your location and brings your car back to life.
               Reliable service, honest pricing, real results.
             </p>
             <div className="mt-6 space-y-1 text-sm text-primary-foreground/70">

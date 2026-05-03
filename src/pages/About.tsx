@@ -41,7 +41,7 @@ export default function About() {
               Car Care Without the Confusion
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We started King Judah Auto Detailing because we believe getting your car cleaned shouldn't be complicated, expensive, or stressful.
+              We started King Judah Auto Detailing because we believe getting your car cleaned shouldn't be complicated, expensive, or stressful—and it should happen wherever you are.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function About() {
                   We wanted something simple: honest pricing, quality work, and friendly service. When we couldn't find it, we decided to build it ourselves.
                 </p>
                 <p>
-                  Today, King Judah Auto Detailing serves drivers in our community who want their cars to look great without the hassle. We're not the cheapest option, but we're the one you can trust.
+                  Today, King Judah Auto Detailing is a fully mobile service for drivers in our community who want their cars to look great without the hassle. We're not the cheapest option, but we're the one you can trust.
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function About() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-accent font-bold">3.</span>
-                  <span>We communicate clearly and respect your time.</span>
+                  <span>We come to your location, communicate clearly, and respect your time.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-accent font-bold">4.</span>
@@ -119,7 +119,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              To make professional car detailing accessible, transparent, and hassle-free for everyday drivers who just want their car to look and feel great.
+              To make fully mobile car detailing accessible, transparent, and hassle-free for everyday drivers who want professional results without leaving their driveway or workplace.
             </p>
           </div>
         </div>

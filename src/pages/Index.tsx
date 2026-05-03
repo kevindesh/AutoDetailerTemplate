@@ -12,11 +12,11 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              Professional Auto Detailing & Steaming That Brings Your Car{" "}
+              Fully Mobile Auto Detailing & Steaming That Brings Your Car{" "}
               <span className="text-accent">Back to Life</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              We provide reliable, high-quality car detailing and steam cleaning that leaves your vehicle clean, protected, and refreshed. No gimmicks, no upsells—just professional results.
+              We bring professional detailing and steam cleaning directly to your home, condo, or workplace. No shop visit, no waiting room—just reliable, high-quality results at your location.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" asChild>
@@ -46,21 +46,21 @@ function HeroSection() {
 const trustPoints = [
   { icon: Sparkles, text: "Professional results" },
   { icon: ThumbsUp, text: "Honest pricing" },
-  { icon: Shield, text: "High-Quality Service", className: "hidden md:flex" },
-  { icon: Droplets, text: "Mobile-friendly booking", className: "col-span-2 md:w-auto" },
+  { icon: Shield, text: "High-Quality Service" },
+  { icon: Droplets, text: "100% mobile service" },
 ];
 
 function TrustSection() {
   return (
     <section className="section-padding bg-background">
       <div className="section-container">
-        <div className="grid grid-cols-2 gap-8 md:flex md:flex-wrap md:justify-center md:gap-8 lg:gap-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {trustPoints.map((point, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center text-center md:flex-row md:text-left gap-3 text-muted-foreground ${point.className || ""}`}
+              className="flex flex-col items-center text-center gap-3 text-muted-foreground"
             >
-              <point.icon className="w-6 h-6 md:w-5 md:h-5 text-accent" />
+              <point.icon className="w-6 h-6 text-accent" />
               <span className="font-medium">{point.text}</span>
             </div>
           ))}
@@ -138,13 +138,13 @@ const steps = [
   },
   {
     number: "2",
-    title: "We Detail Your Vehicle",
-    description: "Our team works their magic with premium products.",
+    title: "We Come to You",
+    description: "Our mobile setup arrives at your location and details your vehicle on-site.",
   },
   {
     number: "3",
-    title: "Drive Away Clean",
-    description: "Enjoy your refreshed, protected vehicle.",
+    title: "Enjoy the Results",
+    description: "Step into a refreshed, protected vehicle without leaving your schedule.",
   },
 ];
 
@@ -254,10 +254,10 @@ function FinalCTASection() {
     <section className="section-padding bg-primary text-primary-foreground">
       <div className="section-container text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Ready for a Cleaner Car?
+          Ready for Mobile Detailing at Your Location?
         </h2>
         <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-          Book your detail today. Clean car. Zero hassle.
+          Book today and we come to you. Clean car. Zero hassle.
         </p>
         <Button variant="accent" size="xl" asChild>
           <Link to="/contact">Get Your Free Quote</Link>

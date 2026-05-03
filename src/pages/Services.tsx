@@ -138,7 +138,7 @@ export default function Services() {
         <div className="section-container text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            From comprehensive detailing packages to specific individual services, we have the right option for your car and your budget.
+            We're a fully mobile detailing business, so every package is performed at your home, condo, or workplace for maximum convenience.
           </p>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function Services() {
         <div className="section-container text-center">
           <h2 className="text-3xl font-bold mb-4">Not Sure Which Service You Need?</h2>
           <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-            Contact us and we'll help you choose the right package for your vehicle.
+            Contact us and we'll help you choose the right mobile service for your vehicle and location.
           </p>
           <Button variant="accent" size="lg" asChild>
             <Link to="/contact">Get a Free Quote</Link>
